@@ -1,0 +1,13 @@
+<launch>
+	<!-- rviz -->
+	<node pkg="rviz" type="rviz" name="rviz" args="-d $(find pcd_save)/rviz_config/save_pcd_downsampling.rviz"/>
+
+	<!-- main -->
+	<node pkg="pcd_save" name="save_pcd_downsampling" type="save_pcd_downsampling" output="screen">
+		<param name="leafsize" type="double" value="0.2"/>
+		<!-- <param name="filename_load" type="string" value="/home/amsl/ozaki/pcd/tsukuba_autoware_v1.pcd"/> -->
+		<!-- <param name="filename_save" type="string" value="/home/amsl/ozaki/pcd/tsukuba_autoware_v1_downsampled.pcd"/> -->
+		<param name="filename_load" type="string" value="/home/amsl/ozaki/pcd/tsukuba_autoware_v2.pcd"/>
+		<param name="filename_save" type="string" value="/home/amsl/ozaki/pcd/tsukuba_autoware_v2_downsampled.pcd"/>
+	</node>
+</launch>
